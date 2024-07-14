@@ -43,7 +43,7 @@ service_distribution = dat['InternetService'].value_counts()
 
 features = dat[['tenure', 'MonthlyCharges', 'TotalCharges']].fillna(0)
 kmeans = KMeans(n_clusters=3, random_state=0).fit(features)
-churn_data['Cluster'] = kmeans.labels_
+dat['Cluster'] = kmeans.labels_
 
 dat = dat.dropna(subset=['TotalCharges'])
 X = dat[['tenure', 'MonthlyCharges', 'TotalCharges', 'TotalServices']]
