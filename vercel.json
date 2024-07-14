@@ -15,5 +15,9 @@
       "src": "/(.*)",
       "dest": "app.py"
     }
-  ]
+  ],
+  "env": {
+    "PYTHONPATH": "C:\\Users\\31220\\anaconda3\\envs\\new_env"
+  }
 }
+
