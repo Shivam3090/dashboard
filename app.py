@@ -30,6 +30,7 @@ gender_data = dat.groupby('gender').agg(
     AvgMonthlyCharges=pd.NamedAgg(column='AvgMonthlyCharges', aggfunc='mean')
 ).reset_index()
 
+senior_citizens_data = dat[dat['SeniorCitizen'] == 1]
 grouped_senior_data = senior_citizens_data.groupby('gender').agg(
     AvgTotalCharges=pd.NamedAgg(column='TotalCharges', aggfunc='mean'),
     AvgTotalServices=pd.NamedAgg(column='TotalServices', aggfunc='mean'),
