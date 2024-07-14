@@ -3,11 +3,7 @@
   "builds": [
     {
       "src": "app.py",
-      "use": "@vercel/python",
-      "config": {
-        "zeroConfig": true,
-        "installCommand": "build.bat"
-      }
+      "use": "@vercel/python"
     }
   ],
   "routes": [
